@@ -8,7 +8,9 @@
 ## Estado
 
 ### Hito 0
-- Hecho: Creado un repositorio, arreglado el **.gitignore**, y explicar por encima la aplicacion en el readme
+- Hecho:
+  Creado un repositorio, arreglado el **.gitignore**, y explicar por encima la aplicacion en el readme.
+  Subo los bocetos de la posible aplicacion
 
 ### Hito 1
 - Pendiente.
