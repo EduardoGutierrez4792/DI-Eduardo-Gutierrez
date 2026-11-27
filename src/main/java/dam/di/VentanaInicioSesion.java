@@ -34,65 +34,51 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        btnEntrar = new javax.swing.JButton();
+        lbTitulo = new javax.swing.JLabel();
+        pnlDatos = new javax.swing.JPanel();
+        lblUsuario = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
+        lblContrasena = new javax.swing.JLabel();
         txtContrasena = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        pnlBotones = new javax.swing.JPanel();
+        btnEntrar = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("Inicio de sesion");
+        lbTitulo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbTitulo.setText("Iniciar sesion");
+        lbTitulo.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 10, 5, 10));
+        getContentPane().add(lbTitulo, java.awt.BorderLayout.NORTH);
+
+        pnlDatos.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 30, 10, 30));
+        pnlDatos.setLayout(new java.awt.GridLayout(2, 2, 10, 10));
+
+        lblUsuario.setText("Email o numero de telefono*");
+        pnlDatos.add(lblUsuario);
+
+        txtUsuario.setColumns(10);
+        txtUsuario.addActionListener(this::txtUsuarioActionPerformed);
+        pnlDatos.add(txtUsuario);
+
+        lblContrasena.setText("Contraseña*");
+        pnlDatos.add(lblContrasena);
+
+        txtContrasena.setColumns(12);
+        pnlDatos.add(txtContrasena);
+
+        getContentPane().add(pnlDatos, java.awt.BorderLayout.CENTER);
 
         btnEntrar.setText("Siguiente");
         btnEntrar.addActionListener(this::btnEntrarActionPerformed);
+        pnlBotones.add(btnEntrar);
 
-        txtUsuario.addActionListener(this::txtUsuarioActionPerformed);
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(this::btnSalirActionPerformed);
+        pnlBotones.add(btnSalir);
 
-        jLabel2.setText("Contraseña*");
-
-        jLabel3.setText("Email o numero de telefono*");
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(125, 125, 125)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(112, 112, 112))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnEntrar)
-                        .addGap(160, 160, 160))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtContrasena, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(122, 122, 122))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(btnEntrar)
-                .addGap(65, 65, 65))
-        );
+        getContentPane().add(pnlBotones, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -118,6 +104,10 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
     private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsuarioActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -146,9 +136,12 @@ public class VentanaInicioSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel lbTitulo;
+    private javax.swing.JLabel lblContrasena;
+    private javax.swing.JLabel lblUsuario;
+    private javax.swing.JPanel pnlBotones;
+    private javax.swing.JPanel pnlDatos;
     private javax.swing.JPasswordField txtContrasena;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
