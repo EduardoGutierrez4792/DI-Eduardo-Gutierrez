@@ -30,33 +30,55 @@ public class PrimeraVentana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblContador = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        pnlContenido = new javax.swing.JPanel();
+        lblHito2 = new javax.swing.JLabel();
+        pnlBotones = new javax.swing.JPanel();
+        btnCerrarSesion = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Primera ventana");
 
-        lblContador.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
-        lblContador.setText("VENTANA PRINCIPAL");
+        lblNombre.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblNombre.setText("VENTANA PRINCIPAL");
+        lblNombre.setBorder(javax.swing.BorderFactory.createEmptyBorder(15, 10, 10, 10));
+        getContentPane().add(lblNombre, java.awt.BorderLayout.NORTH);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(lblContador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(156, 156, 156))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(119, 119, 119)
-                .addComponent(lblContador)
-                .addContainerGap(133, Short.MAX_VALUE))
-        );
+        pnlContenido.setLayout(new java.awt.BorderLayout());
+
+        lblHito2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHito2.setText("Aqui ira la tabla de mis suscripciones, gasto mensual, limite mensual, gasto anual estimado");
+        pnlContenido.add(lblHito2, java.awt.BorderLayout.CENTER);
+
+        getContentPane().add(pnlContenido, java.awt.BorderLayout.CENTER);
+
+        pnlBotones.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
+
+        btnCerrarSesion.setText("Cerrar sesion");
+        btnCerrarSesion.addActionListener(this::btnCerrarSesionActionPerformed);
+        pnlBotones.add(btnCerrarSesion);
+
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(this::btnSalirActionPerformed);
+        pnlBotones.add(btnSalir);
+
+        getContentPane().add(pnlBotones, java.awt.BorderLayout.SOUTH);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+        new VentanaInicioSesion().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnCerrarSesionActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,6 +106,11 @@ public class PrimeraVentana extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel lblContador;
+    private javax.swing.JButton btnCerrarSesion;
+    private javax.swing.JButton btnSalir;
+    private javax.swing.JLabel lblHito2;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JPanel pnlBotones;
+    private javax.swing.JPanel pnlContenido;
     // End of variables declaration//GEN-END:variables
 }
